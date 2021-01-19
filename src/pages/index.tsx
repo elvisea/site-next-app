@@ -1,5 +1,5 @@
 import React, { useCallback, useRef } from 'react';
-import { FiMail, FiUser, FiLock } from 'react-icons/fi';
+import { FiMail, FiUser, FiLock, FiPhoneForwarded } from 'react-icons/fi';
 import { Form } from '@unform/web';
 import { FormHandles } from '@unform/core';
 
@@ -29,13 +29,10 @@ export default function Home() {
               <h1>Site Guino!</h1>
 
               <Input name="name" icon={FiUser} placeholder="Nome" />
+              <Input name="lastname" icon={FiUser} placeholder="Sobrenome" />
+              <Input name="fone" icon={FiPhoneForwarded} placeholder="Telefone" />
               <Input name="email" icon={FiMail} placeholder="E-mail" />
-              <Input
-                name="password"
-                icon={FiLock}
-                type="password"
-                placeholder="Senha"
-              />
+
               <Button type="submit">Enviar</Button>
             </Form>
           </AnimationContainer>
