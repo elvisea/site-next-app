@@ -5,7 +5,9 @@ export default createGlobalStyle`
   body {
     padding: 0;
     margin: 0;
-    background: #74aded;
+    background: #312E38;
+    color: #FFF;
+    -webkit-font-smoothing: antialiased;
     font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
       Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   }

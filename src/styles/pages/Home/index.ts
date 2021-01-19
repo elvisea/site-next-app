@@ -1,60 +1,75 @@
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
+import { shade } from 'polished';
 
-export const Title = styled.h1`
-  text-align: center;
-  font-size: 20px;
+export const Container = styled.div`
+  height: 100vh;
+  display: flex;
+  align-items: stretch;
 `;
 
-// .container {
-//   min-height: 100vh;
-//   padding: 0 0.5rem;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-// }
+export const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 700px;
+`;
 
-// .main {
-//   padding: 5rem 0;
-//   flex: 1;
-//   display: flex;
-//   flex-direction: column;
-//   justify-content: center;
-//   align-items: center;
-// }
+const appearFromRight = keyframes`
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+`;
 
-// .title a {
-//   color: #0070f3;
-//   text-decoration: none;
-// }
+export const AnimationContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  animation: ${appearFromRight} 1s;
+  form {
+    margin: 80px 0;
+    width: 340px;
+    text-align: center;
+    h1 {
+      margin-bottom: 24px;
+    }
+    a {
+      color: #f4ede8;
+      display: block;
+      margin-top: 24px;
+      text-decoration: none;
+      transition: color 0.2s;
+      &:hover {
+        color: ${shade(0.2, '#f4ede8')};
+      }
+    }
+  }
+  > a {
+    color: #ff9000;
+    display: block;
+    margin-top: 24px;
+    text-decoration: none;
+    transition: color 0.2s;
+    display: flex;
+    align-items: center;
+    svg {
+      margin-right: 16px;
+    }
+    &:hover {
+      color: ${shade(0.2, '#ff9000')};
+    }
+  }
+`;
 
-// .title a:hover,
-// .title a:focus,
-// .title a:active {
-//   text-decoration: underline;
-// }
-
-// .title {
-//   margin: 0;
-//   line-height: 1.15;
-//   font-size: 4rem;
-// }
-
-// .title,
-// .description {
-//   text-align: center;
-// }
-
-// .description {
-//   line-height: 1.5;
-//   font-size: 1.5rem;
-// }
-
-// .code {
-//   background: #fafafa;
-//   border-radius: 5px;
-//   padding: 0.75rem;
-//   font-size: 1.1rem;
-//   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-//     Bitstream Vera Sans Mono, Courier New, monospace;
-// }
+export const Background = styled.div`
+  flex: 1;
+  background: #312E38;
+  background-size: cover;
+`;
