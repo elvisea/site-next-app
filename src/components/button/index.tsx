@@ -1,5 +1,5 @@
 import React, { ButtonHTMLAttributes } from 'react';
-import { Container } from './styles';
+import { Container } from '../../styles/components/button/styles';
 
 type ButtonProps = ButtonHTMLAttributes<HTMLButtonElement> & {
   loading?: boolean;

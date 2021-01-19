@@ -1,18 +1,12 @@
 import React, { useCallback, useRef } from 'react';
-import { FiMail, FiUser, FiLock, FiPhoneForwarded } from 'react-icons/fi';
+import { FiMail, FiUser, FiPhoneForwarded } from 'react-icons/fi';
 import { Form } from '@unform/web';
 import { FormHandles } from '@unform/core';
 
 import Input from '../components/Input'
-import Button from '../components/Button'
+import Button from '../components/button'
 
 import {Container, Content, AnimationContainer, Background} from '../styles/pages/Home'
-
-interface SignUpFormData {
-  name: string;
-  email: string;
-  password: string;
-}
 
 export default function Home() {
   const formRef = useRef<FormHandles>(null);

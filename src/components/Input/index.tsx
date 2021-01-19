@@ -8,7 +8,7 @@ import React, {
 import { IconBaseProps } from 'react-icons';
 import { useField } from '@unform/core';
 
-import { Container } from './styles';
+import { Container } from '../../styles/components/input/styles';
 
 interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   name: string;
