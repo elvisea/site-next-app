@@ -1,39 +1,36 @@
-import React, { useCallback, useRef } from 'react';
-import { FiMail, FiUser, FiPhoneForwarded } from 'react-icons/fi';
-import { Form } from '@unform/web';
-import { FormHandles } from '@unform/core';
+import React from 'react';
 
-import Input from '../components/Input'
-import Button from '../components/button'
-
-import {Container, Content, AnimationContainer, Background} from '../styles/pages/Home'
-
-export default function Home() {
-  const formRef = useRef<FormHandles>(null);
-
-  const handleSubmit = useCallback(() => {}, []) 
-
+const Home: React.FC = () => {
   return (
     <>
-      <Container>
-        <Background />
-        <Content>
-          <AnimationContainer>
-            <Form ref={formRef} onSubmit={handleSubmit}>
-              <h1>Envie seu pedido de orçamento aqui!</h1>
-              <h1>Envie seu pedido de orçamento aqui!</h1>
-              <h1>Envie seu pedido de orçamento aqui!</h1>
+      <div id="app">
+        <div className="box-left">
+          <div className="box-left-center">
+            <h1>Precisando de Câmeras de Segurança seu Cuzão?<br /></h1>
+            <h3>
+              Fale com quem realmente entende de Big Brother e monitore hoje mesmo <br />
+              até o Cú da sua Vizinha!
+            </h3>
+            <p>Envie seu Orçamento e entraremos em contato o mais rápido possível </p>
+          </div>
+        </div>
 
-              <Input name="name" icon={FiUser} placeholder="Nome" />
-              <Input name="lastname" icon={FiUser} placeholder="Sobrenome" />
-              <Input name="fone" icon={FiPhoneForwarded} placeholder="Telefone" />
-              <Input name="email" icon={FiMail} placeholder="E-mail" />
-
-              <Button type="submit">Enviar</Button>
-            </Form>
-          </AnimationContainer>
-        </Content>
-      </Container>
+        <div className="box-right">
+          <div className="box-right-center">
+            <form action="">
+              <h1>Envie Seu Pedido</h1>
+                <input type="text" placeholder="Nome" />
+                <input type="text" placeholder="Sobrenome" />
+                <input type="text" placeholder="Telefone" />
+                <input type="text" placeholder="Email" />
+              <button>Enviar</button>
+              <p>Voltar para logon</p>
+            </form>
+          </div>
+        </div>
+      </div>
     </>
   )
 }
+
+export default Home;
