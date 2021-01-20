@@ -21,6 +21,8 @@ export default function Home() {
           <AnimationContainer>
             <Form ref={formRef} onSubmit={handleSubmit}>
               <h1>Envie seu pedido de orçamento aqui!</h1>
+              <h1>Envie seu pedido de orçamento aqui!</h1>
+              <h1>Envie seu pedido de orçamento aqui!</h1>
 
               <Input name="name" icon={FiUser} placeholder="Nome" />
               <Input name="lastname" icon={FiUser} placeholder="Sobrenome" />
