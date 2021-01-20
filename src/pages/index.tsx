@@ -24,7 +24,7 @@ const Home: React.FC = () => {
                 <input type="text" placeholder="Telefone" />
                 <input type="text" placeholder="Email" />
               <button>Enviar</button>
-              <p>Voltar para logon</p>
+              <p>Ainda Não Está Enviando!</p>
             </form>
           </div>
         </div>
